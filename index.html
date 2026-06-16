@@ -1,103 +1,113 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Final Computer Science Project</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+<html>
+   <head>
+       <title> Final Computer Science Project</title>
+   </head>
+   <body>
+       <h1>Underground Garbage Disposal</h1>
+       <h3>A design and prototype for New York City's cleanliness. </h3>
+       <h2>Agenda</h2>
+       <p>Garbage overflow in NYC streets causes sidewalks to become dirty
+       and difficult to walk through! On top of the irritating idor that stems
+       from the piled up trash because of littering and a weak drainage system.
+       </p>
+       <img src="https://nyc.streetsblog.org/wp-content/uploads/sites/9/2022/03/garbage-bags-with-pedestrian1a-1-rotated.jpg" width="100" height="auto">
+       <img src="https://static01.nyt.com/images/2024/03/02/upshot/02up-trash-cities-PROMOstatic/02up-trash-cities-PROMOstatic-videoSixteenByNineJumbo1600-v2.jpg" width="200" height = "auto">
+       <p>The Underground Garbage disposal system can assit this City crises by</p>
 
-    <header>
-        <h1>Underground Garbage Disposal</h1>
-        <p class="subtitle">A design and prototype for New York City's cleanliness</p>
-    </header>
 
-    <main class="container">
-        
-        <section class="card">
-            <h2>Agenda</h2>
-            <p>Garbage overflow in NYC streets causes sidewalks to become dirty and difficult to walk through! This is compounded by the irritating odor that stems from piled-up trash due to littering and a weak drainage system.</p>
-            
-            <div class="image-grid">
-                <img src="https://streetsblog.org" alt="NYC garbage bags">
-                <img src="https://nyt.com" alt="Trash piles in city">
-            </div>
+       <ul>
+           <li>Storing garbage underground, giving a bigger space for deposits.</li>
+           <li>Allowing for a rapid and seamingless collection of trash and reducing the amount of trash bags used.</li>
+           <li>By moving the trash underground, there would be less visibility of garbage in public areas.</li>
+           <li>The design of the underground system allows the pungent odor to be kept bellow street level and, reduces
+           pollutants that are released into the air! </li>
+       </ul>
 
-            <p>The Underground Garbage disposal system can assist this City crisis by:</p>
-            <ul>
-                <li>Storing garbage underground, giving a bigger space for deposits.</li>
-                <li>Allowing for rapid and seamless collection of trash and reducing the amount of trash bags used.</li>
-                <li>Moving the trash underground to reduce visibility of garbage in public areas.</li>
-                <li>Keeping the pungent odor below street level and reducing pollutants released into the air.</li>
-            </ul>
-        </section>
 
-        <section class="card accent-purple">
-            <h2>Objective</h2>
-            <ul>
-                <li>Design a garbage can whose top piece aligns with the dimensions of a garbage truck's rear.</li>
-                <li>Create an underground trash can that can easily be emptied into a garbage truck, making collection more efficient and eliminating street piles.</li>
-            </ul>
-        </section>
+       <h3>Objective</h3>
+      
+       <ul>
+           <li>Design a garbage can which it's top piece
+           aligns with the dimensions of the garbage truck's rear.</li>
+           <li>The design is an underground trash can that can easily be emptied into a garbage truck. This would make trash collection more efficient and effective, and trash piles would be eliminated.</li>
+       </ul>
 
-        <section class="card accent-yellow">
-            <h2>Main Issues & Data</h2>
-            <ul>
-                <li><strong>The Waste Scale:</strong> New York City produces approximately 44 million pounds (about 20 million kilograms) of waste daily, with 24 million pounds collected by the sanitation department. Annually, NYC produces nearly 2.6 million tons of trash (about 5,511,556,555 pounds), with Brooklyn generating the most on average.</li>
-                <li><strong>Vulnerable Systems:</strong> The city drainage system is vulnerable to rainstorms, often flooding and failing to drain fully.</li>
-            </ul>
-        </section>
 
-        <section class="card">
-            <h2>Solutions</h2>
-            <p>Set up organized, larger-sized trash bins and pile trash underground to occupy more space. Implementing green infrastructure is crucial. While countries like the Netherlands have similar systems, this setup is necessary for a major city like NYC. Ultimately, NYC can start building these underground systems in newly developed areas across all boroughs and gradually roll it out over the years.</p>
-            <div class="image-center">
-                <img src="3CEF0E9D-38F7-44A9-8F0A-78AA8BC24555" alt="Solution sketch" class="single-img">
-            </div>
-        </section>
+       <h3>Main Issues</h3>
 
-        <section class="card">
-            <h2>Prototype Development</h2>
-            <p>It is important to acknowledge the materials used for this project:</p>
-            <ul>
-                <li>Cardboard (developing a miniature crane attached to the garbage can and its rear to the truck).</li>
-                <li>Arduino Uno, L298 Motor Driver Module, DC Gear Motor, Servo Motor, 2 Push Buttons, Mini Breadboard, Jumper Wires, Double Battery Holder, Crane structure (Cardboard/Wood/Acrylic), and a USB Cable.</li>
-            </ul>
-            
-            <h3>Wiring Reference</h3>
-            <div class="image-center">
-                <img src="image.png" alt="Arduino wiring schematic" class="single-img">
-            </div>
 
-            <h3>Difficulties Encountered</h3>
-            <p>As the program neared its end, replicating a scaled-down truck was unreasonable. Instead, I constructed a firm cardboard box wrapped with tape to represent the neck of a crane. Another issue was weight and dimensions. Additionally, a 9V battery was used instead of a 3.7V battery to supply enough power to the L298 motor driver. Wiring directly to digital pins was tedious, so I super-glued the wires to the 12V and GND entrances on the motor driver.</p>
-            
-            <div class="image-grid">
-                <img src="IMG_4088" alt="Prototype progress 1">
-                <img src="IMG_0224" alt="Prototype progress 2">
-            </div>
-        </section>
+       <ul>
+           <li> New York City produces approximately 44 million pounds (about 20 million kilograms) of waste daily, with about 24 million pounds collected by the city's sanitation department.
+with New York annually producing approximately 2.5 million tons of trash per year. This figure has been consistent, with an average of nearly 2.6 million tons since 2020. The waste generation varies across boroughs, with Brooklyn producing the most trash on average. or about 5,511,556,555 Pounds of trash yearly.</li>
+           <li>The drainage system in city is vulnerable to rainstorm-- It often floods and  does not drain fully</li>
+       </ul>
 
-        <section class="card">
-            <h2>OnShape Design & Final Verdict</h2>
-            <p>Using the structure mentioned, the smaller servo motor is controlled by the Arduino Uno to rotate the crane arm when the first button is pressed. When the second button is pressed, the larger yellow DC motor is powered by the L298 driver to reel in the string attached to the can. </p>
-            <p>The larger 3D modeled piece is not shown due to an alignment error with the crane arm; the string causes the can to swing and miss the extension. This issue stemmed from misjudged dimensions in OnShape. For future improvement, using two DC motors would be ideal because the crane arm weight is too heavy for a standard servo motor.</p>
-            
-            <div class="image-center">
-                <img src="Screenshot 2026-06-15 10.09.52 PM.png" alt="OnShape CAD Model" class="single-img">
-            </div>
 
-            <div class="center-btn">
-                <a href="https://onshape.com" class="btn" target="_blank" rel="noopener noreferrer">Open OnShape Design</a>
-            </div>
-        </section>
+       <h3>Solutions</h3>
+       <p> Set up organized trash bins, possibly larger sizes.
+Pile the trash underground so it could occupy more space
+Implement green infrastructure. However, some European countries like the Netherlands already has a similar system implemented, but the need for this system is a neccessary for the important city NYC is within the United States. Additionally, it can be helpful to report any cloggeds sewers, and upgrading the combined sewer systems. Ultimatley, NYC can start building these underground garbage systems in new developed and rezoned areas in all boroughs, and gradually roll out this system over the years!</p>
+       <img src="3CEF0E9D-38F7-44A9-8F0A-78AA8BC24555">
 
-    </main>
 
-    <footer>
-        <p>&copy; 2026 STEM Final Project Portfolio</p>
-    </footer>
+       <h3>Prototype</h3>
 
-</body>
+
+       <p>It is important to acknowlegde the materials used for this project!
+
+
+           <ul>
+               <li>Cardboard (developing a miniature crane attached to the garbage can and its rear to the truck
+               <li> Arduino Uno L298 Motor Driver Module DC Gear Motor Servo Motor 2 Push Buttons Mini Breadboard Jumper Wires Double Battery Holder (two 3.7V cells) Crane structure (Cardboard / Wood / Acrylic) USB Cable for programming</li>
+           Here is an example of the templete I Utilized for wiring via Arduino
+           <img src="image.png" width="200" hieght = "auto">
+
+
+           </ul>
+       </p>
+
+
+       <h4>Difficulties</h4>
+       <p> As the Saturday Stem Program was coming towards its end,
+           replicating a scaled down truck was unreasonbale to develop.
+           A feasible choice I found reasonable was to construct a firm
+           cardboard box with a longer height and wrapped with tape! This
+           would represnt the neck of a crane that would hypothetically be
+           attacthed to the rear of a truck. Another issue i ran into was the
+           wieght and dimensions whcih will be mentioned in the <b> OnShape Design</b>
+           section. Additionally, a 9 volt battery without any wire holders was used
+           instead of 3.7 V battery since more was needed to power a L298 motor driver.
+           The expierence was very tedious when connecting the postive and negative wires
+           to the approtiate digital pins on the breadboard. As a result i super glued the
+           wires to the 12V and GND entrance on the motor driver.
+       </p>
+       <img src="IMG_4088">
+       <img src="IMG_0224">
+
+
+       <h3>OnShape and final verdict</h3>
+       <p>Using the 'neck' structure as mentioned before, the smaller servo motor is
+       controlled by the Arduino Uno to rotate the crane arm when one button is pressed.
+       When pressed by the second button, the larger DC motor(in yellow)is powered by the L298
+       motor drive since it requires more voltage to reel in the string that is attacthed to the
+       garbage can. As the photos dictate, the larger 3D modeled piece of the whole disposal system
+       is not shown becuase of the unalignment of the crane arm.The string causes the garbage can to
+       swing and miss the dedicated extension which serves to be underground. This issue was pointed out
+       through the misjudged demensions of the garabge can modeled through Onshape. Additonally, there was
+       definantly room for imporvement regarding the placement of the DC motor and servo. It would of been
+       a more ideal situation if the 2 DC motors were used becuase the wieght of the crane arm to reel in
+       the garbage can is too heavy for standard servo.
+       </p>
+       <img src="Screenshot 2026-06-15 10.09.52 PM.png">
+       <a href="https://cad.onshape.com/documents/52089a2ce548d90f81b3aafd/w/4e6bee1b098e814842bf02af/e/0fa888c77027d03d7d95cb95?renderMode=0&leftPanel=false&uiState=6a30b801f65bd0542a2a1d94"> Onshape Link</a>
+
+
+  
+   </body>
+
+
 </html>
+
+
+
