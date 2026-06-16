@@ -1,1 +1,321 @@
+/* ==============================
+   Underground Disposal — Portfolio
+   NYC Dark Theme
+   ============================== */
 
+/* --- Tokens --- */
+:root {
+  --bg:         #0a0a14;
+  --bg-card:    #0f0f1f;
+  --bg-section: #12122a;
+  --blue-deep:  #1e3a8a;
+  --blue:       #3b82f6;
+  --blue-light: #60a5fa;
+  --purple:     #7c3aed;
+  --purple-light:#a78bfa;
+  --yellow:     #facc15;
+  --yellow-dim: #ca9a04;
+  --white:      #f0f0ff;
+  --muted:      #8888aa;
+  --border:     #1e1e3f;
+  --glow-blue:  0 0 18px rgba(59, 130, 246, 0.35);
+  --glow-yellow:0 0 14px rgba(250, 204, 21, 0.5);
+}
+
+/* --- Reset & Base --- */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background-color: var(--bg);
+  color: var(--white);
+  font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  min-height: 100vh;
+}
+
+/* --- Import Google Font --- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap');
+
+/* ================================
+   HERO / HEADER
+================================ */
+header {
+  background: linear-gradient(135deg, #080814 0%, #0d1442 50%, #130820 100%);
+  border-bottom: 2px solid var(--yellow);
+  box-shadow: var(--glow-yellow);
+  padding: 64px 24px 48px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle grid overlay for depth */
+header::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(59,130,246,0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(59,130,246,0.06) 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
+}
+
+header h1 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 700;
+  color: var(--white);
+  letter-spacing: -0.02em;
+  text-shadow: var(--glow-blue);
+  position: relative;
+}
+
+header h1 span {
+  color: var(--yellow);
+}
+
+header .subtitle {
+  margin-top: 12px;
+  font-size: 1.05rem;
+  color: var(--purple-light);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-weight: 500;
+  position: relative;
+}
+
+/* ================================
+   LAYOUT WRAPPER
+================================ */
+main {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 24px 80px;
+}
+
+/* ================================
+   SECTION DIVIDER (signature NYC neon rule)
+================================ */
+.neon-rule {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 56px 0 28px;
+}
+
+.neon-rule::before,
+.neon-rule::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--blue), transparent);
+  opacity: 0.5;
+}
+
+.neon-rule span {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--yellow);
+  text-shadow: var(--glow-yellow);
+  white-space: nowrap;
+}
+
+/* ================================
+   SECTION HEADINGS
+================================ */
+h2 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--blue-light);
+  margin-bottom: 16px;
+}
+
+h3 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--purple-light);
+  margin-bottom: 12px;
+}
+
+h4 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--yellow);
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+/* ================================
+   PARAGRAPHS & BODY TEXT
+================================ */
+p {
+  color: #c8c8e0;
+  margin-bottom: 16px;
+  line-height: 1.75;
+}
+
+/* ================================
+   CARDS (for Agenda, Objective, etc.)
+================================ */
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--blue);
+  border-radius: 10px;
+  padding: 24px 28px;
+  margin-bottom: 20px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  border-left-color: var(--purple);
+  box-shadow: var(--glow-blue);
+}
+
+/* ================================
+   LISTS
+================================ */
+ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 16px;
+}
+
+ul li {
+  position: relative;
+  padding-left: 22px;
+  margin-bottom: 10px;
+  color: #c8c8e0;
+  line-height: 1.7;
+}
+
+ul li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: var(--yellow);
+  font-size: 0.85rem;
+  top: 2px;
+}
+
+/* ================================
+   STAT / CALLOUT BOX
+================================ */
+.callout {
+  background: linear-gradient(135deg, #0f0f1f, #16103a);
+  border: 1px solid var(--purple);
+  border-radius: 10px;
+  padding: 20px 24px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 20px rgba(124, 58, 237, 0.15);
+}
+
+.callout li::before { color: var(--purple-light); }
+
+/* ================================
+   IMAGES
+================================ */
+.img-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin: 20px 0;
+}
+
+.img-row img,
+.img-single img {
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.5);
+  max-width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.img-row img:hover,
+.img-single img:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--glow-blue);
+}
+
+.img-row img { max-width: 280px; }
+
+/* ================================
+   LINK / CTA
+================================ */
+a.cta-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+  padding: 10px 20px;
+  background: transparent;
+  border: 1px solid var(--blue);
+  color: var(--blue-light);
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  letter-spacing: 0.03em;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+}
+
+a.cta-link:hover {
+  background: var(--blue-deep);
+  color: var(--white);
+  box-shadow: var(--glow-blue);
+}
+
+/* ================================
+   MATERIALS BADGE LIST
+================================ */
+.materials-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 16px 0;
+}
+
+.materials-grid .badge {
+  background: var(--bg-section);
+  border: 1px solid var(--blue-deep);
+  color: var(--blue-light);
+  border-radius: 20px;
+  padding: 5px 14px;
+  font-size: 0.82rem;
+  font-weight: 500;
+}
+
+/* ================================
+   FOOTER
+================================ */
+footer {
+  border-top: 1px solid var(--border);
+  padding: 24px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.82rem;
+  letter-spacing: 0.04em;
+}
+
+/* ================================
+   RESPONSIVE
+================================ */
+@media (max-width: 600px) {
+  .img-row { flex-direction: column; }
+  .img-row img { max-width: 100%; }
+  header { padding: 48px 16px 36px; }
+  main { padding: 0 16px 60px; }
+}
