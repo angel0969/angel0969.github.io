@@ -3,30 +3,30 @@
    NYC Dark Theme
    ============================== */
 
+/* MUST be first */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap');
+
 /* --- Tokens --- */
 :root {
-  --bg:         #0a0a14;
-  --bg-card:    #0f0f1f;
-  --bg-section: #12122a;
-  --blue-deep:  #1e3a8a;
-  --blue:       #3b82f6;
-  --blue-light: #60a5fa;
-  --purple:     #7c3aed;
+  --bg:          #0a0a14;
+  --bg-card:     #0f0f1f;
+  --bg-section:  #12122a;
+  --blue-deep:   #1e3a8a;
+  --blue:        #3b82f6;
+  --blue-light:  #60a5fa;
+  --purple:      #7c3aed;
   --purple-light:#a78bfa;
-  --yellow:     #facc15;
-  --yellow-dim: #ca9a04;
-  --white:      #f0f0ff;
-  --muted:      #8888aa;
-  --border:     #1e1e3f;
-  --glow-blue:  0 0 18px rgba(59, 130, 246, 0.35);
-  --glow-yellow:0 0 14px rgba(250, 204, 21, 0.5);
+  --yellow:      #facc15;
+  --white:       #f0f0ff;
+  --muted:       #8888aa;
+  --border:      #1e1e3f;
+  --glow-blue:   0 0 18px rgba(59, 130, 246, 0.35);
+  --glow-yellow: 0 0 14px rgba(250, 204, 21, 0.5);
 }
 
 /* --- Reset & Base --- */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
 html { scroll-behavior: smooth; }
-
 body {
   background-color: var(--bg);
   color: var(--white);
@@ -35,9 +35,6 @@ body {
   line-height: 1.7;
   min-height: 100vh;
 }
-
-/* --- Import Google Font --- */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap');
 
 /* ================================
    HERO / HEADER
@@ -51,8 +48,6 @@ header {
   position: relative;
   overflow: hidden;
 }
-
-/* Subtle grid overlay for depth */
 header::before {
   content: '';
   position: absolute;
@@ -63,21 +58,15 @@ header::before {
   background-size: 40px 40px;
   pointer-events: none;
 }
-
 header h1 {
   font-family: 'Space Grotesk', sans-serif;
   font-size: clamp(2rem, 5vw, 3.5rem);
   font-weight: 700;
   color: var(--white);
   letter-spacing: -0.02em;
-  text-shadow: var(--glow-blue);
   position: relative;
 }
-
-header h1 span {
-  color: var(--yellow);
-}
-
+header h1 span { color: var(--yellow); }
 header .subtitle {
   margin-top: 12px;
   font-size: 1.05rem;
@@ -98,7 +87,7 @@ main {
 }
 
 /* ================================
-   SECTION DIVIDER (signature NYC neon rule)
+   NEON SECTION DIVIDER
 ================================ */
 .neon-rule {
   display: flex;
@@ -106,7 +95,6 @@ main {
   gap: 12px;
   margin: 56px 0 28px;
 }
-
 .neon-rule::before,
 .neon-rule::after {
   content: '';
@@ -115,7 +103,6 @@ main {
   background: linear-gradient(90deg, transparent, var(--blue), transparent);
   opacity: 0.5;
 }
-
 .neon-rule span {
   font-family: 'Space Grotesk', sans-serif;
   font-size: 0.7rem;
@@ -128,7 +115,7 @@ main {
 }
 
 /* ================================
-   SECTION HEADINGS
+   HEADINGS
 ================================ */
 h2 {
   font-family: 'Space Grotesk', sans-serif;
@@ -137,7 +124,6 @@ h2 {
   color: var(--blue-light);
   margin-bottom: 16px;
 }
-
 h3 {
   font-family: 'Space Grotesk', sans-serif;
   font-size: 1.2rem;
@@ -145,7 +131,6 @@ h3 {
   color: var(--purple-light);
   margin-bottom: 12px;
 }
-
 h4 {
   font-family: 'Space Grotesk', sans-serif;
   font-size: 1rem;
@@ -157,7 +142,7 @@ h4 {
 }
 
 /* ================================
-   PARAGRAPHS & BODY TEXT
+   BODY TEXT
 ================================ */
 p {
   color: #c8c8e0;
@@ -166,7 +151,7 @@ p {
 }
 
 /* ================================
-   CARDS (for Agenda, Objective, etc.)
+   CARDS
 ================================ */
 .card {
   background: var(--bg-card);
@@ -177,7 +162,6 @@ p {
   margin-bottom: 20px;
   transition: border-color 0.2s, box-shadow 0.2s;
 }
-
 .card:hover {
   border-left-color: var(--purple);
   box-shadow: var(--glow-blue);
@@ -191,7 +175,6 @@ ul {
   padding: 0;
   margin-bottom: 16px;
 }
-
 ul li {
   position: relative;
   padding-left: 22px;
@@ -199,7 +182,6 @@ ul li {
   color: #c8c8e0;
   line-height: 1.7;
 }
-
 ul li::before {
   content: '▸';
   position: absolute;
@@ -210,7 +192,7 @@ ul li::before {
 }
 
 /* ================================
-   STAT / CALLOUT BOX
+   CALLOUT BOX
 ================================ */
 .callout {
   background: linear-gradient(135deg, #0f0f1f, #16103a);
@@ -220,7 +202,6 @@ ul li::before {
   margin-bottom: 20px;
   box-shadow: 0 0 20px rgba(124, 58, 237, 0.15);
 }
-
 .callout li::before { color: var(--purple-light); }
 
 /* ================================
@@ -232,28 +213,25 @@ ul li::before {
   gap: 16px;
   margin: 20px 0;
 }
-
 .img-row img,
 .img-single img {
   border-radius: 10px;
   border: 1px solid var(--border);
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 4px 24px rgba(0,0,0,0.5);
   max-width: 100%;
   height: auto;
   display: block;
   transition: transform 0.2s, box-shadow 0.2s;
 }
-
 .img-row img:hover,
 .img-single img:hover {
   transform: translateY(-3px);
   box-shadow: var(--glow-blue);
 }
-
 .img-row img { max-width: 280px; }
 
 /* ================================
-   LINK / CTA
+   CTA LINK BUTTON
 ================================ */
 a.cta-link {
   display: inline-flex;
@@ -271,7 +249,6 @@ a.cta-link {
   letter-spacing: 0.03em;
   transition: background 0.2s, color 0.2s, box-shadow 0.2s;
 }
-
 a.cta-link:hover {
   background: var(--blue-deep);
   color: var(--white);
@@ -279,7 +256,7 @@ a.cta-link:hover {
 }
 
 /* ================================
-   MATERIALS BADGE LIST
+   MATERIALS BADGES
 ================================ */
 .materials-grid {
   display: flex;
@@ -287,7 +264,6 @@ a.cta-link:hover {
   gap: 10px;
   margin: 16px 0;
 }
-
 .materials-grid .badge {
   background: var(--bg-section);
   border: 1px solid var(--blue-deep);
